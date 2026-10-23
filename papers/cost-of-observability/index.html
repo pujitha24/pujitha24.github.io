@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection</title>
+<link rel="canonical" href="https://pujitha24.github.io/papers/cost-of-observability/">
+<meta name="citation_title" content="The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection">
+<meta name="citation_author" content="Paladugu, Pujitha Sri Lakshmi">
+<meta name="citation_author_institution" content="Independent Researcher">
+<meta name="citation_author_orcid" content="https://orcid.org/0009-0001-5678-4022">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_online_date" content="2026/10/11">
+<meta name="citation_language" content="en">
+<meta name="citation_keywords" content="observability; distributed tracing; trace sampling; Prometheus; OpenTelemetry; incident detection; network management; monitoring cost">
+<meta name="citation_pdf_url" content="https://pujitha24.github.io/papers/cost-of-observability/cost-of-observability.pdf">
+<meta name="citation_abstract_html_url" content="https://pujitha24.github.io/papers/cost-of-observability/">
+<meta name="DC.title" content="The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection">
+<meta name="DC.creator" content="Pujitha Sri Lakshmi Paladugu">
+<meta name="DC.issued" content="2026">
+<meta name="DC.type" content="Text.Preprint">
+<style>body{font-family:Georgia,'Times New Roman',serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1a1a1a}
+h1{font-size:1.6rem;line-height:1.25;margin-bottom:.3rem}h2{font-size:1.15rem;margin-top:1.6rem}
+.meta{color:#555;font-size:.95rem}a{color:#1f4e79}ul.pubs li{margin-bottom:1rem}.kw{color:#555;font-size:.9rem}
+.cite{background:#f5f5f5;padding:.6rem .8rem;font-size:.9rem;font-family:monospace;white-space:pre-wrap}</style></head>
+<body>
+<p class="meta"><a href="https://pujitha24.github.io/">Pujitha Sri Lakshmi Paladugu</a> · Publications</p>
+<h1 class="citation_title">The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection</h1>
+<p class="citation_author"><strong>Pujitha Sri Lakshmi Paladugu</strong><br>Independent Researcher · ORCID <a href="https://orcid.org/0009-0001-5678-4022">0009-0001-5678-4022</a></p>
+<p class="meta">Preprint · 2026-10-11 · 36 pages · <a href="cost-of-observability.pdf">Full text (PDF)</a></p>
+<h2>Abstract</h2>
+<p>Operators of cloud services reduce telemetry volume to control monitoring cost: they sample traces, lengthen metric scrape intervals, cap label cardinality and sample logs. Network management has long studied the accuracy–overhead trade-off of polling and packet sampling, but the effect of these service-level reductions on incident detection is rarely measured. We present a reproducible, seeded discrete-time simulation of a 30-service, 59-endpoint microservice system with heavy-tailed request rates and 2,000 Zipf-distributed tenants. We inject five incident classes: a global error spike, a low-traffic endpoint error, a 99th-percentile latency regression on one dependency, a gradual error creep and a single-tenant failure. Forty-three pipeline configurations and 1,247 combinations are evaluated under identical alert rules over 2,500 incident trials and 10 incident-free days, and volumes are priced with three public list-price books. Head sampling at 1% detected 4.8% of low-traffic endpoint failures, against 89.8% at full fidelity. Tail sampling matched full-fidelity detection in every class with 3.9% of the span volume and 25–35 s of added delay, provided its buffer had headroom above peak load. Severity-aware log sampling at 1% preserved error detection but not latency detection. Scrape intervals up to 120 s added at most 40 s of median delay. Capping the tenant label at 100 values reduced tenant-failure detection from 100% to 44%. Closed-form models of capture probability, scrape delay and cardinality dilution agree with the simulation. We map every pipeline to OpenTelemetry Collector and Prometheus configuration and give a procedure for choosing reduction settings.</p>
+<p class="kw"><strong>Keywords:</strong> observability; distributed tracing; trace sampling; Prometheus; OpenTelemetry; incident detection; network management; monitoring cost</p>
+<h2>Cite as</h2>
+<div class="cite">Pujitha Sri Lakshmi Paladugu. The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection. Preprint, 2026. https://pujitha24.github.io/papers/cost-of-observability/</div>
+<div class="cite">@misc{paladugu2026cost,
+  title  = {The Cost of Observability: A Simulation Study of How Trace Sampling, Scrape Intervals, Cardinality Caps and Log Sampling Delay or Prevent Incident Detection},
+  author = {Paladugu, Pujitha Sri Lakshmi},
+  year   = {2026},
+  note   = {Preprint},
+  url    = {https://pujitha24.github.io/papers/cost-of-observability/}
+}</div>
+</body></html>
